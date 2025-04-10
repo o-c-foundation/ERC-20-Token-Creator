@@ -62,10 +62,10 @@ export default function CreateCard() {
     }
 
     return (
-        <Card className="w-full max-w-2xl p-6 space-y-6 bg-black/50 border border-gray-800 shadow-xl rounded-xl text-white">
+        <Card className="w-full max-w-lg md:max-w-2xl p-4 sm:p-6 space-y-4 sm:space-y-6 bg-black/50 border border-gray-800 shadow-xl rounded-xl text-white backdrop-filter backdrop-blur-sm">
             <div className="flex justify-between items-center">
                 <CardTitle>
-                    <h2 className="text-xl font-bold sm:text-2xl text-white">
+                    <h2 className="text-lg sm:text-xl font-bold text-white">
                         Token Creator
                     </h2>
                 </CardTitle>
@@ -75,17 +75,17 @@ export default function CreateCard() {
                     onClick={() => setShowInstructions(!showInstructions)}
                     className="text-blue-400 hover:text-blue-300"
                 >
-                    <InfoIcon />
+                    <InfoIcon size={18} />
                 </Button>
             </div>
             
             {showInstructions ? (
-                <div className="bg-black/30 p-4 rounded-lg border border-blue-900/50">
-                    <h3 className="text-lg font-semibold text-blue-400 mb-2">How to Deploy Your Token</h3>
-                    <ol className="list-decimal list-inside space-y-2 text-gray-300">
+                <div className="bg-black/30 p-3 sm:p-4 rounded-lg border border-blue-900/50">
+                    <h3 className="text-base sm:text-lg font-semibold text-blue-400 mb-2">How to Deploy Your Token</h3>
+                    <ol className="list-decimal list-inside space-y-1 sm:space-y-2 text-gray-300 text-sm sm:text-base">
                         <li>Connect your wallet using the button at the top</li>
                         <li>Enter your token details below:
-                            <ul className="list-disc list-inside ml-6 mt-1 text-gray-400">
+                            <ul className="list-disc list-inside ml-4 sm:ml-6 mt-1 text-gray-400 text-xs sm:text-sm">
                                 <li><span className="font-medium text-white">Name:</span> Full name of your token (e.g., "Open Crypto Token")</li>
                                 <li><span className="font-medium text-white">Symbol:</span> Trading symbol, usually 3-4 letters (e.g., "OCT")</li>
                                 <li><span className="font-medium text-white">Decimals:</span> Divisibility of your token (18 is standard like ETH)</li>
@@ -96,19 +96,19 @@ export default function CreateCard() {
                         <li>Click Deploy and confirm the transaction in your wallet</li>
                         <li>Once confirmed, your tokens will be minted to your connected wallet address</li>
                     </ol>
-                    <p className="mt-3 text-blue-300 text-sm">Supported on multiple networks including Ethereum, Arbitrum, Base, Polygon, BSC, Avalanche, and more!</p>
+                    <p className="mt-3 text-blue-300 text-xs sm:text-sm">Supported on multiple networks including Ethereum, Arbitrum, Base, Polygon, BSC, Avalanche, and more!</p>
                 </div>
             ) : (
                 <CardDescription>
-                    <p className="text-gray-400">
+                    <p className="text-gray-400 text-sm">
                         Enter your token details below and deploy your ERC-20 token with a single click.
                     </p>
                 </CardDescription>
             )}
             
-            <CardContent className='w-full p-2 grid grid-cols-1 sm:grid-cols-2 gap-5 justify-items-center items-center'>
-                <div className="space-y-2 w-full">
-                    <label className="font-medium text-gray-300">
+            <CardContent className='w-full p-0 sm:p-2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 justify-items-center items-center'>
+                <div className="space-y-1 sm:space-y-2 w-full">
+                    <label className="font-medium text-gray-300 text-sm">
                         Name
                     </label>
                     <Input 
@@ -118,8 +118,8 @@ export default function CreateCard() {
                         className="bg-black/30 border-gray-700 text-white"
                     />
                 </div>
-                <div className="space-y-2 w-full">
-                    <label className="font-medium text-gray-300">
+                <div className="space-y-1 sm:space-y-2 w-full">
+                    <label className="font-medium text-gray-300 text-sm">
                         Symbol
                     </label>
                     <Input 
@@ -129,8 +129,8 @@ export default function CreateCard() {
                         className="bg-black/30 border-gray-700 text-white"
                     />
                 </div>
-                <div className="space-y-2 w-full">
-                    <label className="font-medium text-gray-300">
+                <div className="space-y-1 sm:space-y-2 w-full">
+                    <label className="font-medium text-gray-300 text-sm">
                         Decimals
                     </label>
                     <Input 
@@ -143,8 +143,8 @@ export default function CreateCard() {
                         className="bg-black/30 border-gray-700 text-white"
                     />
                 </div>
-                <div className="space-y-2 w-full">
-                    <label className="font-medium text-gray-300">
+                <div className="space-y-1 sm:space-y-2 w-full">
+                    <label className="font-medium text-gray-300 text-sm">
                         Supply
                     </label>
                     <Input 
@@ -158,7 +158,7 @@ export default function CreateCard() {
                 </div>
             </CardContent>
             
-            <div className="flex justify-center">
+            <div className="flex justify-center pt-2">
                 {!isConnected ? (
                     <ConnectButton />
                 ) : (
@@ -167,7 +167,7 @@ export default function CreateCard() {
                         onClick={() => handleDeploy()}
                         className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-white"
                     >
-                        <RocketIcon className="mr-2" />Deploy Token
+                        <RocketIcon className="mr-2" size={16} />Deploy Token
                     </Button>
                 )}
             </div>
