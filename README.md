@@ -65,7 +65,6 @@ Initialize the development server:
 npm run dev
 ```
 
-Access the application at [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## License
 This project is distributed under the MIT License.
