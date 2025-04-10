@@ -4,7 +4,7 @@
 The Open Crypto Foundation ERC-20 Token Creator is a sophisticated decentralized application designed to democratize token creation on blockchain networks. This innovative platform empowers users to deploy custom ERC-20 tokens with precision and ease across multiple blockchain ecosystems. Through an intuitive interface, users can establish their digital assets by connecting their preferred wallet, configuring token parameters, and deploying to their network of choice—all with remarkable efficiency.
 
 ## Demo
-[Live Demo](#) - *Coming Soon*
+[Live Demo](https://erc-20-token-creator.vercel.app/) 
 
 ## Features
 - **Seamless Wallet Integration:** Comprehensive support for diverse wallet providers through RainbowKit's advanced connector system.
