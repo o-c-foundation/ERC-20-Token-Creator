@@ -72,9 +72,8 @@ This project is distributed under the MIT License.
 
 ## Contact Information
 For inquiries and support:
-- **Telegram:** [@xerxescoder](https://t.me/xerxescoder)
-- **Telegram Channel:** [@xerxescodes](https://t.me/xerxescodes)
-- **Email:** [xerxescode@gmail.com](mailto:xerxescode@gmail.com)
+- **Email:** [info@opencryptofoundation.com](mailto:info@opencryptofoundation.com)
+- **Website:** [Open Crypto Foundation](https://opencryptofoundation.com)
 
 
 
